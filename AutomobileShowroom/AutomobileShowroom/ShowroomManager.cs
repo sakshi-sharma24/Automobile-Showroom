@@ -9,6 +9,7 @@ namespace AutomobileShowroom
     public class ShowroomManager 
     {
         private Showroom _showroom;
+        
         public ShowroomManager()
         {
             _showroom = new Showroom();
@@ -29,6 +30,12 @@ namespace AutomobileShowroom
         public void TestDrive()
         {
             _showroom.TestDrive();
+        }
+
+      
+        public bool IsVehicleAvailable()
+        {
+            return _showroom.GetVehicles() != null;
         }
 
     }

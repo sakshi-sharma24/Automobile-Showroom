@@ -8,5 +8,10 @@ namespace AutomobileShowroom
 {
     interface IServices
     {
+        Invoice SellVehicle(decimal cost,out Vehicle vehicle);
+        Invoice RentVehicle(decimal cost,out Vehicle vehicle);
+        Vehicle MaintainenceService(Invoice invoice,Vehicle vehicle);
+        Vehicle TestDrive();
+
     }
 }

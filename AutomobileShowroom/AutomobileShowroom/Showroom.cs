@@ -12,20 +12,17 @@ namespace AutomobileShowroom
         private decimal _cost;
         private Invoice _invoice;
 
-        public Showroom(decimal cost,Invoice invoice)
+        public Showroom()
         {
             _vehicle = new List<Vehicle>();
-            _cost = cost;
-            _invoice = invoice;
+           
         }
-        public Invoice SellVehicle(decimal cost, out Vehicle vehicle)
+        public Invoice SellVehicle(decimal cost, out Vehicle _vehicle)
         {
-           if(cost==_cost)
-            {
-                
-            }
+            _vehicle = null;
+            return null;
         }
-
+        
         public Invoice RentVehicle(decimal cost, out Vehicle vehicle)
         {
             throw new NotImplementedException();
@@ -39,6 +36,10 @@ namespace AutomobileShowroom
         public Vehicle TestDrive()
         {
             throw new NotImplementedException();
+        }
+        public List<Vehicle> GetVehicles()
+        {
+            return _vehicle;
         }
     }
 }
